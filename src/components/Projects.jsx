@@ -88,7 +88,7 @@ const Projects = () => {
       links: [
         {
           type: "github",
-          url: "https://github.com/yourusername/lms-project",
+          url: "https://github.com/vinonsan9744",
           icon: <FaGithub />,
           label: "Source Code"
         }
@@ -120,7 +120,7 @@ const Projects = () => {
       links: [
         {
           type: "github",
-          url: "https://github.com/yourusername/portfolio-project",
+          url: "https://github.com/vinonsan9744",
           icon: <FaGithub />,
           label: "Source Code"
         }
@@ -149,7 +149,7 @@ const Projects = () => {
       links: [
         {
           type: "github",
-          url: "https://github.com/yourusername/attractive-portfolio",
+          url: "https://github.com/vinonsan9744",
           icon: <FaGithub />,
           label: "Source Code"
         }
