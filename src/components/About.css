@@ -1,0 +1,394 @@
+.about-section {
+  padding: 8rem 0 4rem;
+  background: #000;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Text Section Styling */
+.about-text {
+  padding-right: 3rem;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4CAF50, #156e18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 80px;
+  height: 3px;
+  background: #4CAF50;
+  border-radius: 2px;
+}
+
+.about-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-image-container:hover {
+  transform: translateY(-10px);
+}
+
+.about-image-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    #4CAF5033,
+    transparent
+  );
+  z-index: 1;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover .about-image {
+  transform: scale(1.05);
+}
+
+.about-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #4CAF50, #156e18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  background: linear-gradient(135deg, #4CAF50 30%, #156e18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-description {
+  line-height: 1.8;
+  color: #bcf1be;
+  margin-bottom: 2rem;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.highlight-item {
+  padding: 1rem;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 5px 15px #4CAF501a;
+  transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #4CAF5033;
+}
+
+.highlight-icon {
+  color: #4CAF50;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-text {
+  font-size: 1rem;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+.role-container {
+  font-size: 1.8rem;
+  color: #EEEEEE;
+  margin: 1.5rem 0;
+  min-height: 2.2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.animated-role {
+  background: linear-gradient(135deg, #4CAF50 30%, #156e18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  min-width: 10px;
+}
+
+.about-description {
+  color: #EEEEEE;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.download-cv-btn {
+  background: linear-gradient(135deg, #4CAF50, #156e18) !important;
+  border: none !important;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-cv-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px #4CAF504d;
+}
+
+/* Social Icons */
+.social-icons-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4CAF50, #156e18);
+  color: #EEEEEE;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, #ffffff1a, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.social-icon:hover::before {
+  transform: translateX(100%);
+}
+
+.social-icon:hover {
+  color: #FFFFFF;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px #4CAF5066;
+}
+
+/* Image Styling */
+.about-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-profile-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 4px solid #4CAF50;
+  padding: 8px;
+  position: relative;
+  z-index: 2;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 20px 40px #4CAF5033;
+}
+
+/* Add decorative rotating circles */
+.about-image-container::before,
+.about-image-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 20px;
+  border: 2px dashed #4CAF50;
+  animation: spin 20s linear infinite;
+}
+
+.about-image-container::before {
+  width: 380px;
+  height: 380px;
+  opacity: 0.3;
+}
+
+.about-image-container::after {
+  width: 420px;
+  height: 420px;
+  animation-direction: reverse;
+  opacity: 0.2;
+}
+
+/* Add new animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add a glowing effect on hover */
+.about-image-container:hover .about-profile-image {
+  box-shadow: 0 0 30px #4CAF504d;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.about-image-container:hover::before,
+.about-image-container:hover::after {
+  border-color: #4CAF50;
+  opacity: 0.5;
+}
+
+/* Add typing cursor animation */
+.typing-cursor {
+  color: #4CAF50;
+  font-weight: bold;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .about-section {
+    padding: 5rem 0 2rem;
+    text-align: center;
+  }
+
+  .about-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .main-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-description {
+    margin: 1.5rem auto;
+  }
+
+  .social-icons-container {
+    justify-content: center;
+  }
+
+  .about-profile-image {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .about-image-container::before {
+    width: 330px;
+    height: 330px;
+  }
+  
+  .about-image-container::after {
+    width: 370px;
+    height: 370px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section {
+    padding: 4rem 0 2rem;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .role-container {
+    font-size: 1.4rem;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .about-profile-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .about-image-container::before {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .about-image-container::after {
+    width: 320px;
+    height: 320px;
+  }
+}

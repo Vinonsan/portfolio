@@ -1,0 +1,403 @@
+.footer {
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  padding-top: 6rem;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent,
+    #4CAF50,
+    #156e18,
+    #4CAF50,
+    transparent
+  );
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-areas: 
+    "brand links1 links2 contact"
+    "social links1 links2 contact";
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 4rem 3rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand-section {
+  grid-area: brand;
+  position: relative;
+}
+
+.footer-social-section {
+  grid-area: social;
+  align-self: start;
+}
+
+.footer-links-1 {
+  grid-area: links1;
+}
+
+.footer-links-2 {
+  grid-area: links2;
+}
+
+
+
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1.5rem;
+  justify-content: start;
+}
+
+.footer-bottom {
+  position: relative;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent,
+    #4CAF5033,
+    transparent
+  );
+}
+
+.footer-bottom-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.copyright {
+  text-align: left;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+@media (max-width: 1200px) {
+  .footer-content {
+    grid-template-areas: 
+      "brand brand contact"
+      "social links1 links2";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-content {
+    grid-template-areas: 
+      "brand brand"
+      "links1 links2"
+      "contact contact"
+      "social social";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-contact {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-areas: 
+      "brand"
+      "links1"
+      "links2"
+      "contact"
+      "social";
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  .footer-bottom-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .copyright {
+    text-align: center;
+    order: 2;
+  }
+
+  .footer-bottom-links {
+    order: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-contact {
+    padding: 1.2rem;
+  }
+
+  .social-media {
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+  }
+
+  .scroll-top {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+.footer-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #4CAF50, #156e18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.footer-bio {
+  color: #EEEEEE;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.footer h4 {
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #4CAF50;
+}
+
+.footer-contact p {
+  color: #EEEEEE;
+  opacity: 0.8;
+  line-height: 1.8;
+}
+
+.footer-contact strong {
+  color: #4CAF50;
+  margin-right: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: #4CAF501a;
+  border: 1px solid #4CAF5033;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, #4CAF5033, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: #FFFFFF;
+  border-color: #4CAF50;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px #4CAF5033;
+}
+
+.social-link:hover::before {
+  transform: translateX(100%);
+}
+
+.heart-icon {
+  color: #4CAF50;
+  animation: heartBeat 1.5s ease infinite;
+}
+
+.highlight {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.scroll-to-top {
+  background: #4CAF50;
+  color: #EEEEEE;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px #4CAF5033;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px #4CAF504d;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+/* Updated icon color */
+.section-icon {
+  margin-right: 0.5rem;
+  color: #4CAF50;
+}
+
+.contact-list,
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li,
+.links-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-list .icon {
+  color: #4CAF50;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+.links-list a {
+  color: #EEEEEE;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.links-list a:hover {
+  color: #4CAF50;
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.footer-legal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.footer-legal a {
+  color: #EEEEEE;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #4CAF50;
+  opacity: 1;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #EEEEEE;
+  opacity: 0.7;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  color: #4CAF50;
+  opacity: 1;
+}
+.separator {
+  color: #4CAF50;
+}
+.highlight{
+  color: #4CAF50;
+
+}
+.scroll-to-top{
+  background-color: #4CAF50;
+}

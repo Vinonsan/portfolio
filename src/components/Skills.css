@@ -1,0 +1,355 @@
+.skills-section {
+  padding: 8rem 0;
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section-title-wrapper {
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  color: #EEEEEE;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #4CAF50, #156e18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rotating-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: #4CAF501a;
+  border: 2px solid #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rotating-icon {
+  color: #4CAF50;
+  font-size: 2rem;
+  animation: rotateIcon 4s linear infinite;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.skill-circle {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.circle-progress {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4CAF501a, #156e181a);
+  border: 2px solid #4CAF50;
+  transition: all 0.3s ease;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background: #000;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.skill-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #4CAF501a, #156e181a);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.skill-name {
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #4CAF50, #156e18);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.skill-percentage {
+  color: #4CAF50;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 6px;
+  background: #4CAF501a;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #156e18);
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+/* Hover effects */
+.skill-circle:hover {
+  transform: scale(1.05);
+}
+
+.skill-circle:hover .circle-progress {
+  box-shadow: 0 0 30px #4CAF5033;
+  border-color: #4CAF50;
+}
+
+.skill-circle:hover .skill-icon-wrapper {
+  transform: rotate(10deg) scale(1.1);
+  background: linear-gradient(135deg, #4CAF5033, #156e1833);
+}
+
+/* Animations */
+@keyframes rotateIcon {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stagger animation */
+.skill-circle:nth-child(1) { animation-delay: 0.1s; }
+.skill-circle:nth-child(2) { animation-delay: 0.2s; }
+.skill-circle:nth-child(3) { animation-delay: 0.3s; }
+.skill-circle:nth-child(4) { animation-delay: 0.4s; }
+.skill-circle:nth-child(5) { animation-delay: 0.5s; }
+.skill-circle:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-circle {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Add this to create space between sections */
+.section-title-wrapper:not(:first-child) {
+  margin-top: 5rem;
+}
+
+/* Update the skills grid animation for the second section */
+.skills-grid:nth-child(4) .skill-circle:nth-child(1) { animation-delay: 1.1s; }
+.skills-grid:nth-child(4) .skill-circle:nth-child(2) { animation-delay: 1.2s; }
+.skills-grid:nth-child(4) .skill-circle:nth-child(3) { animation-delay: 1.3s; }
+.skills-grid:nth-child(4) .skill-circle:nth-child(4) { animation-delay: 1.4s; }
+.skills-grid:nth-child(4) .skill-circle:nth-child(5) { animation-delay: 1.5s; }
+.skills-grid:nth-child(4) .skill-circle:nth-child(6) { animation-delay: 1.6s; }
+.skills-grid:nth-child(4) .skill-circle:nth-child(7) { animation-delay: 1.7s; }
+.skills-grid:nth-child(4) .skill-circle:nth-child(8) { animation-delay: 1.8s; }
+
+/* Add these new styles for teaching skills */
+.teaching-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teaching-skill-card {
+  background: #00000008;
+  border: 1px solid #4CAF5033;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.teaching-skill-card .skill-icon {
+  width: 50px;
+  height: 50px;
+  background: #4CAF501a;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #4CAF50;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.teaching-skill-card .skill-content {
+  flex: 1;
+}
+
+.teaching-skill-card .skill-title {
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.teaching-skill-card .skill-description {
+  color: #EEEEEE;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.skill-progress-container {
+  height: 8px;
+  background: rgba(238, 238, 238, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #156e18);
+  border-radius: 4px;
+  position: relative;
+  transition: width 1s ease;
+  animation: progressAnimation 1.5s ease-out forwards;
+}
+
+.progress-label {
+  position: absolute;
+  right: 5px;
+  top: -20px;
+  color: #4CAF50;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Hover effects */
+.teaching-skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #4CAF50;
+  box-shadow: 0 10px 30px #4CAF5026;
+}
+
+.teaching-skill-card:hover .skill-icon {
+  transform: rotate(10deg) scale(1.1);
+  background: #4CAF5033;
+}
+
+/* Stagger animation for teaching skills */
+.teaching-skill-card:nth-child(1) { animation-delay: 2.1s; }
+.teaching-skill-card:nth-child(2) { animation-delay: 2.2s; }
+.teaching-skill-card:nth-child(3) { animation-delay: 2.3s; }
+.teaching-skill-card:nth-child(4) { animation-delay: 2.4s; }
+.teaching-skill-card:nth-child(5) { animation-delay: 2.5s; }
+.teaching-skill-card:nth-child(6) { animation-delay: 2.6s; }
+.teaching-skill-card:nth-child(7) { animation-delay: 2.7s; }
+.teaching-skill-card:nth-child(8) { animation-delay: 2.8s; }
+
+/* Responsive adjustments for teaching skills */
+@media (max-width: 991px) {
+  .teaching-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .teaching-skill-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem;
+  }
+
+  .teaching-skill-card .skill-icon {
+    margin-bottom: 1rem;
+  }
+
+  .teaching-skill-card .skill-title {
+    font-size: 1.1rem;
+  }
+
+  .teaching-skill-card .skill-description {
+    font-size: 0.85rem;
+  }
+}

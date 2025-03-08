@@ -1,0 +1,118 @@
+.section-divider {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.divider-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent,
+    #4CAF504d,
+    #4CAF50,
+    #4CAF504d,
+    transparent
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.divider-dot {
+  width: 12px;
+  height: 12px;
+  background: #4CAF50;
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.divider-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.divider-dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.divider-dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.divider-line::before,
+.divider-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4CAF50, transparent);
+  animation: borderFlow 3s linear infinite;
+}
+
+.divider-line::before {
+  left: -40%;
+}
+
+.divider-line::after {
+  right: -40%;
+  animation-direction: reverse;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    box-shadow: 0 0 15px #4CAF5080;
+  }
+}
+
+@keyframes borderFlow {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(100%) scaleX(0.5);
+  }
+  100% {
+    transform: translateX(200%) scaleX(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-divider {
+    height: 80px;
+  }
+  
+  .divider-line {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-divider {
+    height: 60px;
+  }
+  
+  .divider-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .divider-line {
+    width: 90%;
+    gap: 20px;
+  }
+} 
