@@ -53,7 +53,7 @@ const Projects = () => {
       links: [
         {
           type: "github",
-          url: "https://github.com/vinonsan9744/Techwizards-Implementaion2.git",
+          url: "https://github.com/Vinonsan/Srilankan-Railway-Safety-system",
           icon: <FaGithub />,
           label: "Source Code"
         },
@@ -120,7 +120,7 @@ const Projects = () => {
       links: [
         {
           type: "github",
-          url: "https://github.com/vinonsan9744",
+          url: "https://github.com/Vinonsan/Mathu-Portfolio",
           icon: <FaGithub />,
           label: "Source Code"
         }
@@ -128,7 +128,7 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Attractive Portfolio for Friends",
+      title: "Attractive Portfolio for Client",
       overview: "A visually appealing portfolio application using React.js with stunning animations and modern designs. This project is focused on the frontend experience to showcase the skills and projects of friends with interactive elements.",
       keyPoints: [
         "Beautiful and engaging UI with animations",
@@ -149,7 +149,7 @@ const Projects = () => {
       links: [
         {
           type: "github",
-          url: "https://github.com/vinonsan9744",
+          url: "https://github.com/Vinonsan/harigeshan-portfolio",
           icon: <FaGithub />,
           label: "Source Code"
         }

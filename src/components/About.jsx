@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaFacebookF, FaYoutube, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import profileImage from '../assets/vinonsan.jpg'; // Import the image
 import { FaDownload } from "react-icons/fa";
 
@@ -74,11 +74,11 @@ function About() {
 
 
             <div className="social-icons-container">
-              <a href="https://www.facebook.com/share/18ggvQriGm/" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://web.facebook.com/vinonsan.vino.7" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FaFacebookF />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <FaTwitter />
+              <a href="https://youtube.com/@masterbrain5989?si=_UoN_msyBv2Oyxas" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <FaYoutube />
               </a>
               <a href="https://www.linkedin.com/in/vinonsan-gloed-edward-b759121a7/" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FaLinkedinIn />

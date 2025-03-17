@@ -60,17 +60,17 @@ function Skills() {
     },
     { 
       name: "Django", 
-      level: 80, 
+      level: 20, 
       icon: <SiDjango className="icon-django" />
     },
     { 
       name: "Flask", 
-      level: 75, 
+      level: 0, 
       icon: <SiFlask className="icon-flask" />
     },
     { 
       name: "Laravel", 
-      level: 80, 
+      level: 20, 
       icon: <SiLaravel className="icon-laravel" />
     },
     { 
@@ -90,12 +90,12 @@ function Skills() {
     },
     { 
       name: "Git/GitHub", 
-      level: 85, 
+      level: 50, 
       icon: <FaGitAlt className="icon-git" />
     },
     { 
       name: "Spring Boot", 
-      level: 75, 
+      level: 0, 
       icon: <SiSpringboot className="icon-springboot" />
     }
   ]
@@ -123,17 +123,17 @@ function Skills() {
     },
     {
       name: "Vue.js",
-      level: 80,
+      level: 0,
       icon: <FaReact  className="icon-vue" />
     },
     {
       name: "Angular",
-      level: 75,
+      level: 0,
       icon: <FaAngular className="icon-angular" />
     },
     {
       name: "Next.js",
-      level: 80,
+      level: 20,
       icon: <SiNextdotjs className="icon-nextjs" />
     },
     {
@@ -143,7 +143,7 @@ function Skills() {
     },
     {
       name: "Tailwind CSS",
-      level: 80,
+      level: 30,
       icon: <SiTailwindcss className="icon-tailwind" />
     },
     {
@@ -187,7 +187,7 @@ function Skills() {
     },
     {
       name: "TypeScript",
-      level: 85,
+      level: 0,
       icon: <SiTypescript className="icon-typescript" />
     },
     {
@@ -197,12 +197,12 @@ function Skills() {
     },
     {
       name: "Swift",
-      level: 75,
+      level: 0,
       icon: <SiSwift className="icon-swift" />
     },
     {
       name: "Kotlin",
-      level: 70,
+      level: 0,
       icon: <SiKotlin className="icon-kotlin" />
     }
   ];
